@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+// SCSS Variables for better organization
+$font-primary: 'Courier New', monospace;
+$color-light-bg: #ffffff;
+$color-light-fg: #171717;
+$color-dark-bg: #0a0a0a;
+$color-dark-fg: #ededed;
+
+:root {
+  --background: #{$color-light-bg};
+  --foreground: #{$color-light-fg};
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Courier New', monospace;
+  --font-mono: 'Courier New', monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #{$color-dark-bg};
+    --foreground: #{$color-dark-fg};
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: $font-primary;
+}

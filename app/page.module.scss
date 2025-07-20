@@ -1,0 +1,35 @@
+$font-chord: '#6cae75';
+
+.song {
+    &__song-header {
+        margin-bottom: 1rem;
+
+        h1 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    &__song-section {
+        p:first-child {
+            font-weight: bold;
+        }
+        margin-top: 1.5rem;
+    }
+
+    &__song-lyrics {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+
+        div {
+            p:first-child {
+                color: #{$font-chord};
+                font-weight: 800;
+            }
+        }
+    }
+}
